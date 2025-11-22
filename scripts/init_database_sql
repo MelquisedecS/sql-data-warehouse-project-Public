@@ -1,0 +1,61 @@
+/*
+====================================
+
+Create Database and Schemas
+
+====================================
+
+
+🗄️ PostgreSQL — Database & Schema Creation Script
+📘 Overview
+
+This script creates a new database named DataWarehouse and sets up the three standard layers used in the Medallion Architecture:
+
+bronze
+
+silver
+
+gold
+
+⚠️ IMPORTANT WARNING
+
+The command DROP DATABASE permanently deletes the entire DataWarehouse database and all existing data.
+
+👉 Proceed only if you are absolutely sure and confirm that any required backup has been made.
+*/
+
+🚀 PostgreSQL SQL Script
+
+PostgreSQL requires that:
+
+Database creation must be executed from an existing database (e.g., postgres).
+
+Schema creation must be executed inside the newly created database.
+
+🔷 Step 1 — Create the Database
+
+📌 Run this step while connected to your default admin database (e.g., postgres )
+
+-- 1. DATABASE DROP AND CREATION  
+-- WARNING: THIS WILL DELETE ALL EXISTING DATA IN THE DATABASE!
+
+DROP DATABASE IF EXISTS "DataWarehouse";
+CREATE DATABASE "DataWarehouse";
+
+🔶 Step 2 — Create the Schemas (Bronze, Silver, Gold)
+
+📌 Now switch your connection to the new database before running the commands below.
+
+In psql, use:
+
+\c DataWarehouse
+
+✅ Schema Creation
+-- 3. SCHEMA CREATION
+CREATE SCHEMA IF NOT EXISTS bronze;
+CREATE SCHEMA IF NOT EXISTS silver;
+CREATE SCHEMA IF NOT EXISTS gold;
+
+🔐 (Optional) Grant Permissions
+-- 4. GRANT PERMISSIONS (ADAPT 'your_user' TO YOUR POSTGRES USER)
+GRANT USAGE ON SCHEMA bronze, silver, gold TO your_user;
