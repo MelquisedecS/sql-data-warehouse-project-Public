@@ -33,6 +33,28 @@ Develop SQL-based analytics to deliver detailed insights into:
 
 These insights empower stakeholders with key Business metrics, enabling strategic decision-making.
 
+---
+
+### 👤 About Me
+
+Hi, I’m Melquisedec Sebastião — a Data Analyst & BI professional with experience in Finance, Accounting, and Auditing. I’m currently transitioning into Data Science, and this project reflects my focus on structured data architecture, modeling, and analytics.
+
+📌 Let’s connect and share ideas:
+👉 LinkedIn: https://www.linkedin.com/in/melquisedec-sebastiao/
+
+---
+
+### 🤝 Contributions
+
+Contributions, suggestions, and collaborations are welcome! Feel free to open an issue or submit a pull request.
+
+---
+
+
+###📜 License
+
+MIT 
+
 
 
 
