@@ -1,4 +1,4 @@
-# 📘 Gold Layer — README Documentation
+# 📘 Gold Layer — Data Catalog
 
 ## 🏆 Overview
 The **Gold Layer** is the curated, business-ready data model used for analytics, dashboards, KPIs, and advanced reporting.  
@@ -31,21 +31,21 @@ This layer is optimized for BI tools, data modeling, and semantic layer consumpt
 
 ## 📐 Entity-Relationship Diagram (ASCII ERD)
 ```
- ┌────────────────────┐         ┌────────────────────┐
- │   gold.dim_customers│         │   gold.dim_products │
- │─────────────────────│         │─────────────────────│
- │ customer_key (PK)   │         │ product_key (PK)    │
+ ┌──────────────────────┐        ┌─────────────────────┐
+ │ gold.dim_customers   │        │   gold.dim_products │
+ │──────────────────────│        │─────────────────────│
+ │ customer_key (PK)    │        │ product_key (PK)    │
  │ customer_id          │        │ product_id          │
  │ customer_number      │        │ product_number      │
  │ first_name           │        │ product_name        │
  │ last_name            │        │ category_id         │
  │ country              │        │ category            │
  │ marital_status       │        │ subcategory         │
- │ gender               │        │ maintenance_required│
+ │ gender               │        │ maintenance         │
  │ birthdate            │        │ cost                │
- │ create_date          │        │ product_line        │
- └───────────┬─────────┘        │ start_date          │
-             │                   └─────────┬──────────┘
+ │                      │        │ product_line        │
+ └───────────┬──────────┘        │ start_date          │
+             │                   └─────────┬───────────┘
              │                             │
              ▼                             ▼
                  ┌──────────────────────────┐
@@ -61,6 +61,7 @@ This layer is optimized for BI tools, data modeling, and semantic layer consumpt
                  │ quantity                 │
                  │ price                    │
                  └──────────────────────────┘
+
 ```
 
 ## 🧱 Dimension Tables
